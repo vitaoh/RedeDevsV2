@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Noticia</title>
+<link rel="stylesheet" href="../estilos/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+
+<body class="vh-fundo">
+  <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="index.html" class="nav-brand">RedeDevs</a>
+          <div class="nav-links" id="navLinks">
+            <div class="search-container">
+              <input
+                type="search"
+                placeholder="Pesquisar..."
+                class="search-input"
+                id="pesquisa"
+              />
+              <button class="search-btn" id="btnPesquisa">Buscar</button>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+        <div class="nav-right">
+          
+          <div class="nav-dropdown" id="perfil">
+            <a href="#" class="nav-link dropdown-toggle" id="perfilToggle">
+              <i class="fas fa-user"></i> Perfil
+            </a>
+            <div class="dropdown-menu" id="dropdownMenu">
+              <a href="perfil.html" class="dropdown-item">
+                <i class="fas fa-edit"></i> Editar Perfil
+              </a>
+              <a href="#" class="dropdown-item" id="historico">
+                <i class="fas fa-history"></i> Histórico
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" id="logout">
+                <i class="fas fa-sign-out-alt"></i> Sair
+              </a>
+            </div>
+          </div>
+          <a href="sobre.html" class="nav-link">Sobre</a>
+          <a href="login.html" class="nav-link" id="login">Login</a>
+        </div>
+      </div>
+    </nav>                                                                                                                                               
+
+<div class="container mt-4">
+  <!-- Botão de voltar -->
+  <div class="mb-3">
+  <a href="index.html" class="btn custom-back-btn">
+    <i class="fas fa-arrow-left"></i>
+    <span>Voltar</span>
+  </a>
+</div>
+<style>
+/* Botão Voltar customizado */
+.custom-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12);
+  padding: 0.6rem 1.6rem;
+  margin-top: 1.5rem; /* Aqui está a margin top */
+  text-decoration: none !important; /* Remove sublinhado */
+  transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+.custom-back-btn:hover, .custom-back-btn:focus {
+  background: linear-gradient(90deg, #1e40af, #3b82f6);
+  color: #fff !important;
+  text-decoration: none !important;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.custom-back-btn i {
+  font-size: 1.2rem;
+}
+</style>
+
+
+  <!-- Container principal estilo LinkedIn -->
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <!-- Post principal estilo LinkedIn -->
+      <div class="linkedin-post-detail">
+        <!-- Header do post -->
+        <div class="post-header">
+          <img id="author-avatar" src="https://ui-avatars.com/api/?name=User&background=5E17EB&color=fff" alt="Avatar" class="user-avatar">
+          <div class="user-info">
+            <h6 id="nomeAutor" class="user-name">Nome do autor</h6>
+            <span class="post-time">
+              <span id="data">Data da Publicação</span> • <i class="fas fa-globe-americas"></i>
+            </span>
+          </div>
+          <div class="more-options" id="author-actions">
+            <!-- Botões de editar e excluir serão inseridos aqui pelo JavaScript se o usuário for o autor -->
+          </div>
+        </div>
+
+        <!-- Conteúdo do post -->
+        <div class="post-content">
+          <p id="titulo" class="post-text">
+            <!-- O texto da notícia será inserido aqui pelo JavaScript -->
+          </p>
+          
+          <!-- Imagem do post -->
+          <div id="image-container" class="post-image-container">
+            <img id="imagem" src="#" class="post-image">
+          </div>
+        </div>
+
+        <!-- Estatísticas do post -->
+        <div class="post-stats">
+          <span class="stats-item">
+            <i class="fas fa-heart"></i> <span id="like-count">0</span>
+          </span>
+          <span class="stats-item">
+            <span id="comment-count">0</span> comentários
+          </span>
+          <span class="stats-item">
+            <i class="far fa-eye"></i> <span id="views">0</span> visualizações
+          </span>
+        </div>
+
+        <!-- Ações do post -->
+        <div class="post-actions">
+          <button id="like-btn" class="action-btn">
+            <i class="far fa-heart"></i> Curtir
+          </button>
+          <button class="action-btn" onclick="document.getElementById('chat-input').focus()">
+            <i class="far fa-comment"></i> Comentar
+          </button>
+          <button id="share-btn" class="action-btn">
+            <i class="far fa-share-square"></i> Compartilhar
+          </button>
+          <button class="action-btn">
+            <i class="far fa-paper-plane"></i> Enviar
+          </button>
+        </div>
+      </div>
+
+      <!-- Seção de comentários estilo LinkedIn -->
+      <div class="comments-section">
+        <div class="comments-header">
+          
+        </div>
+        
+        <!-- Formulário de comentário -->
+        <div>
+          <form id="chat-form">
+            <img id="user-avatar" src="https://ui-avatars.com/api/?name=User&background=5E17EB&color=fff" alt="Avatar">
+            <div class="comment-input-container">
+              <input id="chat-input" type="text" class="comment-input" placeholder="Escreva um comentário...">
+              <button id="chat-submit" class="comment-submit" type="submit">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        
+        <!-- Lista de comentários -->
+        <div id="chat-messages" class="comments-list"></div>
+      </div>
+    </div>
+
+    
+
+<!-- Modal de login -->
+<div class="modal-overlay d-none d-flex align-items-center justify-content-center" id="modal">
+  <div class="modalNoticia">
+    <div class="modal-header-custom">
+      <h5><i class="fas fa-lock me-2"></i>Comentário bloqueado</h5>
+    </div>
+    <div class="modal-body-custom">
+      <p>Para realizar um comentário é necessário estar logado em uma conta!</p>
+    </div>
+    <div class="modal-footer-custom">
+      <button type="button" class="btn btn-secondary" id="fechar">Fechar</button>
+      <button type="button" class="btn btn-primary" id="logar">Fazer login</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de imagem em tela cheia -->
+<div class="modal-overlay d-none d-flex align-items-center justify-content-center" id="image-modal">
+  <div class="image-modal-container">
+    <button id="close-fullscreen" class="btn btn-light btn-sm position-absolute top-0 end-0 m-3">
+      <i class="fas fa-times"></i>
+    </button>
+    <img id="fullscreen-image" src="#" alt="Imagem em tela cheia" class="fullscreen-image">
+  </div>
+</div>
+
+<script src="../scripts/navbar.js"></script>
+<script src="../scripts/noticia.js"></script>
+<script src="https://kit.fontawesome.com/8977fa014d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

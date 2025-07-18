@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedeDev's - Avaliação de Usabilidade e Conclusão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="presentation-container">
+        <!-- Cabeçalho com controles -->
+        <header class="presentation-header">
+            <div class="presentation-controls">
+                <button class="btn btn--outline btn--sm" id="prevBtn">← Anterior</button>
+                <span class="slide-indicator">
+                    <span id="currentSlide">1</span> / <span id="totalSlides">10</span>
+                </span>
+                <button class="btn btn--outline btn--sm" id="nextBtn">Próximo →</button>
+                <button class="btn btn--secondary btn--sm" id="fullscreenBtn">Tela Cheia</button>
+            </div>
+        </header>
+
+        <!-- Barra de progresso -->
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <!-- Container dos slides -->
+        <main class="slides-container" id="slidesContainer">
+            
+            <!-- Slide 1: Título -->
+            <section class="slide active" data-slide="1">
+                <div class="slide-content title-slide">
+                    <h1>RedeDev's</h1>
+                    <h2>Avaliação de Usabilidade e Conclusão</h2>
+                    <div class="subtitle">
+                        <p>Resultados dos Testes e Recomendações</p>
+                    </div>
+                    <div class="authors">
+                        <p><strong>Equipe:</strong> Cauan Mendes, Luiz Monico, Tiago Setti, Victor Herculini</p>
+                        <p><strong>Instituição:</strong> Instituto Federal de São Paulo - Campus Araraquara</p>
+                        <p><strong>Projeto:</strong> Rede Social de Programação</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 2: Introdução Breve -->
+            <section class="slide" data-slide="2">
+                <div class="slide-content">
+                    <h2>Introdução Breve</h2>
+                    <div class="intro-content">
+                        <div class="project-description">
+                            <div class="description-card">
+                                <h3>💻 O que é o RedeDev's?</h3>
+                                <p>Uma rede social dedicada exclusivamente à comunidade de programação, focada em facilitar o aprendizado e a troca de conhecimento entre desenvolvedores iniciantes e experientes.</p>
+                            </div>
+                            <div class="objectives-grid">
+                                <div class="objective-item">
+                                    <span class="obj-icon">🎯</span>
+                                    <div>
+                                        <h4>Contexto do Projeto</h4>
+                                        <p>Criação de uma plataforma colaborativa para estudantes e profissionais de tecnologia</p>
+                                    </div>
+                                </div>
+                                <div class="objective-item">
+                                    <span class="obj-icon">📊</span>
+                                    <div>
+                                        <h4>Objetivos da Avaliação</h4>
+                                        <p>Identificar problemas de usabilidade e propor melhorias para a experiência do usuário</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Métodos de Teste -->
+            <section class="slide" data-slide="3">
+                <div class="slide-content">
+                    <h2>Métodos de Avaliação Utilizados</h2>
+                    <div class="methods-grid">
+                        <div class="method-card">
+                            <div class="method-header">
+                                <span class="method-number">1</span>
+                                <h3>Avaliação Heurística</h3>
+                            </div>
+                            <p>Análise sistemática da interface baseada nos princípios de usabilidade de Nielsen, identificando violações e problemas de design</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-header">
+                                <span class="method-number">2</span>
+                                <h3>Percurso Cognitivo</h3>
+                            </div>
+                            <p>Avaliação detalhada do processo mental do usuário ao executar tarefas, simulando o comportamento cognitivo durante a interação</p>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-header">
+                                <span class="method-number">3</span>
+                                <h3>Testes de Usabilidade</h3>
+                            </div>
+                            <p>Observação direta de usuários reais executando tarefas específicas, coletando dados quantitativos e qualitativos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 4: Atividades de Teste -->
+            <section class="slide" data-slide="4">
+                <div class="slide-content">
+                    <h2>Atividades de Teste de Usabilidade</h2>
+                    <div class="activities-container">
+                        <div class="activities-intro">
+                            <p>Foram definidas 4 atividades principais para avaliar as funcionalidades essenciais da plataforma:</p>
+                        </div>
+                        <div class="activities-grid">
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-label">ATV1</span>
+                                    <h3>Autenticação</h3>
+                                </div>
+                                <p><strong>Tarefa:</strong> Criar credenciais de login e fazer login</p>
+                                <div class="activity-details">
+                                    <span class="detail-item">👤 Cadastro de usuário</span>
+                                    <span class="detail-item">🔐 Processo de login</span>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-label">ATV2</span>
+                                    <h3>Criação de Conteúdo</h3>
+                                </div>
+                                <p><strong>Tarefa:</strong> Criar publicação com texto e imagem</p>
+                                <div class="activity-details">
+                                    <span class="detail-item">📝 Editor de posts</span>
+                                    <span class="detail-item">📷 Upload de imagens</span>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-label">ATV3</span>
+                                    <h3>Gestão de Conta</h3>
+                                </div>
+                                <p><strong>Tarefa:</strong> Modificar senha e fazer login novamente</p>
+                                <div class="activity-details">
+                                    <span class="detail-item">🔑 Alteração de senha</span>
+                                    <span class="detail-item">🔒 Reautenticação</span>
+                                </div>
+                            </div>
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-label">ATV4</span>
+                                    <h3>Interação Social</h3>
+                                </div>
+                                <p><strong>Tarefa:</strong> Interagir com publicações (curtir e comentar)</p>
+                                <div class="activity-details">
+                                    <span class="detail-item">❤️ Sistema de curtidas</span>
+                                    <span class="detail-item">💬 Comentários</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Visão Geral dos Resultados -->
+            <section class="slide" data-slide="5">
+                <div class="slide-content">
+                    <h2>Visão Geral dos Resultados</h2>
+                    <div class="results-overview">
+                        <div class="main-metrics">
+                            <div class="metric-highlight">
+                                <div class="metric-value">93,75%</div>
+                                <div class="metric-label">Taxa de Sucesso Geral</div>
+                                <div class="metric-description">15 de 16 tarefas concluídas com sucesso</div>
+                            </div>
+                            <div class="metric-highlight">
+                                <div class="metric-value">16</div>
+                                <div class="metric-label">Total de Tarefas</div>
+                                <div class="metric-description">Distribuídas entre 4 atividades principais</div>
+                            </div>
+                            <div class="metric-highlight">
+                                <div class="metric-value">15</div>
+                                <div class="metric-label">Tarefas Concluídas</div>
+                                <div class="metric-description">Apenas 1 tarefa não foi completada</div>
+                            </div>
+                        </div>
+                        <div class="performance-summary">
+                            <div class="summary-section success">
+                                <h3>✅ Funcionalidades Eficientes</h3>
+                                <ul>
+                                    <li>Criação de publicações com texto e imagem</li>
+                                    <li>Interações sociais (curtidas e comentários)</li>
+                                    <li>Interface intuitiva e linguagem familiar</li>
+                                </ul>
+                            </div>
+                            <div class="summary-section challenge">
+                                <h3>⚠️ Principais Desafios</h3>
+                                <ul>
+                                    <li>Gestão de credenciais e autenticação</li>
+                                    <li>Processo de alteração de senha</li>
+                                    <li>Falta de feedback em operações críticas</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Resultados Detalhados por Atividade -->
+            <section class="slide" data-slide="6">
+                <div class="slide-content">
+                    <h2>Resultados Detalhados por Atividade</h2>
+                    <div class="detailed-results">
+                        <div class="results-grid">
+                            <div class="result-card">
+                                <div class="result-header">
+                                    <span class="result-label">ATV1</span>
+                                    <h3>Autenticação</h3>
+                                </div>
+                                <div class="result-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-number">100%</span>
+                                        <span class="metric-name">Taxa de Sucesso</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">16</span>
+                                        <span class="metric-name">Erros Registrados</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">4,2/5</span>
+                                        <span class="metric-name">Satisfação Média</span>
+                                    </div>
+                                </div>
+                                <div class="result-status moderate">Moderado</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-header">
+                                    <span class="result-label">ATV2</span>
+                                    <h3>Criação de Conteúdo</h3>
+                                </div>
+                                <div class="result-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-number">100%</span>
+                                        <span class="metric-name">Taxa de Sucesso</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">0</span>
+                                        <span class="metric-name">Erros Registrados</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">5,0/5</span>
+                                        <span class="metric-name">Satisfação Média</span>
+                                    </div>
+                                </div>
+                                <div class="result-status excellent">Excelente</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-header">
+                                    <span class="result-label">ATV3</span>
+                                    <h3>Gestão de Conta</h3>
+                                </div>
+                                <div class="result-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-number">75%</span>
+                                        <span class="metric-name">Taxa de Sucesso</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">12</span>
+                                        <span class="metric-name">Erros Registrados</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">3,8/5</span>
+                                        <span class="metric-name">Satisfação Média</span>
+                                    </div>
+                                </div>
+                                <div class="result-status challenging">Desafiador</div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-header">
+                                    <span class="result-label">ATV4</span>
+                                    <h3>Interação Social</h3>
+                                </div>
+                                <div class="result-metrics">
+                                    <div class="metric-item">
+                                        <span class="metric-number">100%</span>
+                                        <span class="metric-name">Taxa de Sucesso</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">0</span>
+                                        <span class="metric-name">Erros Registrados</span>
+                                    </div>
+                                    <div class="metric-item">
+                                        <span class="metric-number">5,0/5</span>
+                                        <span class="metric-name">Satisfação Média</span>
+                                    </div>
+                                </div>
+                                <div class="result-status excellent">Excelente</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Principais Descobertas dos Testes -->
+            <section class="slide" data-slide="7">
+                <div class="slide-content">
+                    <h2>Principais Descobertas dos Testes</h2>
+                    <div class="findings-container">
+                        <div class="best-performance">
+                            <div class="finding-header">
+                                <h3>🏆 Melhor Performance</h3>
+                            </div>
+                            <div class="finding-content">
+                                <div class="performance-item">
+                                    <div class="perf-icon">📝</div>
+                                    <div class="perf-details">
+                                        <h4>Criação de Publicações</h4>
+                                        <p>100% de sucesso, 0 erros, satisfação máxima (5/5)</p>
+                                        <span class="perf-insight">Interface intuitiva e processo claro</span>
+                                    </div>
+                                </div>
+                                <div class="performance-item">
+                                    <div class="perf-icon">💬</div>
+                                    <div class="perf-details">
+                                        <h4>Interações Sociais</h4>
+                                        <p>100% de sucesso, 0 erros, satisfação máxima (5/5)</p>
+                                        <span class="perf-insight">Funcionalidades familiares e bem implementadas</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="challenging-areas">
+                            <div class="finding-header">
+                                <h3>⚠️ Áreas Desafiadoras</h3>
+                            </div>
+                            <div class="finding-content">
+                                <div class="challenge-item">
+                                    <div class="challenge-icon">🔐</div>
+                                    <div class="challenge-details">
+                                        <h4>Gestão de Credenciais</h4>
+                                        <p>16 erros registrados, satisfação 4,2/5</p>
+                                        <span class="challenge-issues">Requisitos de senha pouco claros</span>
+                                    </div>
+                                </div>
+                                <div class="challenge-item">
+                                    <div class="challenge-icon">🔑</div>
+                                    <div class="challenge-details">
+                                        <h4>Alteração de Senha</h4>
+                                        <p>75% de sucesso, 12 erros, satisfação 3,8/5</p>
+                                        <span class="challenge-issues">Processo complexo e falta de feedback</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="specific-issues">
+                            <h3>🔍 Problemas Específicos Identificados</h3>
+                            <div class="issues-grid">
+                                <div class="issue-item">
+                                    <span class="issue-icon">🔒</span>
+                                    <span class="issue-text">Requisitos de senha não especificados</span>
+                                </div>
+                                <div class="issue-item">
+                                    <span class="issue-icon">🖼️</span>
+                                    <span class="issue-text">Formatos de imagem limitados</span>
+                                </div>
+                                <div class="issue-item">
+                                    <span class="issue-icon">🔕</span>
+                                    <span class="issue-text">Ausência de mensagens de confirmação</span>
+                                </div>
+                                <div class="issue-item">
+                                    <span class="issue-icon">⚙️</span>
+                                    <span class="issue-text">Dificuldade em recuperar senha</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Resultados da Inspeção -->
+            <section class="slide" data-slide="8">
+                <div class="slide-content">
+                    <h2>Resultados da Avaliação por Inspeção</h2>
+                    <div class="inspection-results">
+                        <div class="heuristic-findings">
+                            <h3>🔍 Avaliação Heurística</h3>
+                            <div class="heuristic-grid">
+                                <div class="heuristic-positive">
+                                    <h4>✅ Pontos Fortes</h4>
+                                    <ul>
+                                        <li>
+                                            <span class="finding-icon">💬</span>
+                                            <strong>Linguagem familiar ao público-alvo</strong>
+                                            <p>Terminologia técnica adequada e compreensível</p>
+                                        </li>
+                                        <li>
+                                            <span class="finding-icon">🎨</span>
+                                            <strong>Padrão visual consistente</strong>
+                                            <p>Interface harmoniosa e elementos bem organizados</p>
+                                        </li>
+                                        <li>
+                                            <span class="finding-icon">⚡</span>
+                                            <strong>Funcionalidades básicas intuitivas</strong>
+                                            <p>Operações principais de fácil compreensão</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="heuristic-negative">
+                                    <h4>❌ Problemas Identificados</h4>
+                                    <ul>
+                                        <li>
+                                            <span class="finding-icon">🔔</span>
+                                            <strong>Ausência de mensagens de confirmação</strong>
+                                            <p>Falta de feedback após ações importantes</p>
+                                        </li>
+                                        <li>
+                                            <span class="finding-icon">🔙</span>
+                                            <strong>Falta de elementos de navegação</strong>
+                                            <p>Ausência de botão "voltar" em certas telas</p>
+                                        </li>
+                                        <li>
+                                            <span class="finding-icon">❓</span>
+                                            <strong>Ambiguidade terminológica</strong>
+                                            <p>Termo "legenda" pode causar confusão</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cognitive-findings">
+                            <h3>🧠 Percurso Cognitivo</h3>
+                            <div class="cognitive-summary">
+                                <div class="cognitive-item">
+                                    <div class="cognitive-icon">✅</div>
+                                    <div class="cognitive-text">
+                                        <h4>Processos Mentais Adequados</h4>
+                                        <p>Usuários conseguem formar modelos mentais corretos para tarefas básicas</p>
+                                    </div>
+                                </div>
+                                <div class="cognitive-item">
+                                    <div class="cognitive-icon">⚠️</div>
+                                    <div class="cognitive-text">
+                                        <h4>Sobrecarga Cognitiva</h4>
+                                        <p>Tarefas de segurança exigem mais esforço mental do usuário</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Conclusões e Recomendações -->
+            <section class="slide" data-slide="9">
+                <div class="slide-content">
+                    <h2>Conclusões e Recomendações</h2>
+                    <div class="recommendations-container">
+                        <div class="recommendations-intro">
+                            <p>Com base nos resultados dos testes, foram identificadas 6 principais áreas de melhoria:</p>
+                        </div>
+                        <div class="recommendations-grid">
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">1</span>
+                                    <h3>Mensagens de Confirmação</h3>
+                                </div>
+                                <p>Implementar mensagens de confirmação claras e imediatas após ações importantes do usuário</p>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">2</span>
+                                    <h3>Indicadores de Progresso</h3>
+                                </div>
+                                <p>Adicionar indicadores de progresso e feedback visual durante operações que demandam tempo</p>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">3</span>
+                                    <h3>Orientações de Senha</h3>
+                                </div>
+                                <p>Melhorar orientações sobre requisitos de senha com validação em tempo real</p>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">4</span>
+                                    <h3>Formatos de Imagem</h3>
+                                </div>
+                                <p>Expandir formatos de imagem aceitos e melhorar mensagens de erro para uploads</p>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">5</span>
+                                    <h3>Botões de Navegação</h3>
+                                </div>
+                                <p>Implementar botões de navegação (voltar) e melhorar fluxo entre telas</p>
+                            </div>
+                            <div class="recommendation-card">
+                                <div class="rec-header">
+                                    <span class="rec-number">6</span>
+                                    <h3>Terminologia da Interface</h3>
+                                </div>
+                                <p>Revisar terminologia da interface para eliminar ambiguidades e melhorar clareza</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 10: Considerações Finais -->
+            <section class="slide" data-slide="10">
+                <div class="slide-content">
+                    <h2>Testes Unitários - Framework Jest</h2>
+                    <div class="jest-tests">
+                        <div class="tests-table-container">
+                            <table class="tests-table">
+                                <thead>
+                                    <tr>
+                                        <th>Função</th>
+                                        <th>Descrição</th>
+                                        <th>Casos de Teste</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><code>mascaraNome</code></td>
+                                        <td>Remove números da entrada de nome</td>
+                                        <td>&lt;"João123", "João"&gt;; &lt;"Maria 456", "Maria"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>mascaraCPF</code></td>
+                                        <td>Formata entrada de CPF</td>
+                                        <td>&lt;"12345678901", "123.456.789-01"&gt;; &lt;"123456", "123.456"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>mascaraTelefone</code></td>
+                                        <td>Formata entrada de telefone</td>
+                                        <td>&lt;"11987654321", "(11) 98765-4321"&gt;; &lt;"1198765", "(11) 98765"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>mascaraEmail</code></td>
+                                        <td>Valida formato de email</td>
+                                        <td>&lt;"", "Digite um email"&gt;; &lt;"teste@exemplo.com", ""&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>mascaraSenha</code></td>
+                                        <td>Valida força da senha</td>
+                                        <td>&lt;"", "Digite uma senha"&gt;; &lt;"Senha123", ""&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>filtrarNoticias</code></td>
+                                        <td>Filtra notícias por termo</td>
+                                        <td>&lt;"Primeira", "Notícia 1"&gt;; &lt;"Xyz", "Nenhum resultado"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>adicionarNoticia</code></td>
+                                        <td>Adiciona nova notícia ao sistema</td>
+                                        <td>&lt;"Dados válidos", "Notícia adicionada"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>editarNoticia</code></td>
+                                        <td>Edita notícia existente</td>
+                                        <td>&lt;"ID válido", "Notícia atualizada"&gt;; &lt;"ID inválido", "Erro"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>excluirNoticia</code></td>
+                                        <td>Remove notícia do sistema</td>
+                                        <td>&lt;"ID válido", "Notícia removida"&gt;; &lt;"ID inválido", "Erro"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>renderizarPag</code></td>
+                                        <td>Controla paginação de resultados</td>
+                                        <td>&lt;"10 itens", "Controles de paginação"&gt;; &lt;"3 itens", "Sem paginação"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>carregarHistorico</code></td>
+                                        <td>Exibe histórico do usuário</td>
+                                        <td>&lt;"Usuário com histórico", "Ações exibidas"&gt;; &lt;"Usuário sem histórico", "Vazio"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>login</code></td>
+                                        <td>Autentica usuário</td>
+                                        <td>&lt;"admin@teste.com","Senha123"&gt;, &lt;"credrado@teste.com","123"&gt;, "Email ou senha incorretos"</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>cadastro</code></td>
+                                        <td>Registra novo usuário</td>
+                                        <td>&lt;"Dados válidos", "Cadastro Bem-Sucedido"&gt;; &lt;"Dados inválidos", "Erro de validação"&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td><code>atualizarPerfil</code></td>
+                                        <td>Atualiza dados do usuário</td>
+                                        <td>&lt;"Dados válidos", "Perfil atualizado"&gt;; &lt;"Email inválido", "Erro de validação"&gt;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 11: Considerações Finais -->
+            <section class="slide" data-slide="11">
+                <div class="slide-content">
+                    <h2>Considerações Finais</h2>
+                    <div class="final-assessment">
+                        <div class="assessment-highlight">
+                            <h3>🏗️ Avaliação Geral do Sistema</h3>
+                            <p>O RedeDev's apresenta uma base sólida com funcionalidades bem implementadas e interface intuitiva, demonstrando potencial significativo para se tornar uma ferramenta valiosa para a comunidade de desenvolvedores.</p>
+                        </div>
+                        
+                        <div class="strengths-weaknesses">
+                            <div class="strength-section">
+                                <h3>🌟 Pontos Fortes da Plataforma</h3>
+                                <ul>
+                                    <li>Alta taxa de sucesso geral (93,75%)</li>
+                                    <li>Excelente performance em funcionalidades core</li>
+                                    <li>Interface familiar ao público-alvo</li>
+                                    <li>Padrão visual consistente e profissional</li>
+                                </ul>
+                            </div>
+                            <div class="improvement-section">
+                                <h3>🔧 Oportunidades de Melhoria</h3>
+                                <ul>
+                                    <li>Aprimoramento do feedback do sistema</li>
+                                    <li>Simplificação de processos de segurança</li>
+                                    <li>Melhoria na navegação entre telas</li>
+                                    <li>Clarificação de terminologia específica</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="impact-assessment">
+                            <h3>📊 Impacto na Experiência do Usuário</h3>
+                            <div class="impact-metrics">
+                                <div class="impact-item">
+                                    <span class="impact-icon">🎯</span>
+                                    <div class="impact-text">
+                                        <h4>Usabilidade Efetiva</h4>
+                                        <p>Usuários conseguem completar tarefas essenciais com alta taxa de sucesso</p>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-icon">😊</span>
+                                    <div class="impact-text">
+                                        <h4>Satisfação do Usuário</h4>
+                                        <p>Avaliação positiva geral, com oportunidades de melhoria específicas</p>
+                                    </div>
+                                </div>
+                                <div class="impact-item">
+                                    <span class="impact-icon">🚀</span>
+                                    <div class="impact-text">
+                                        <h4>Potencial de Crescimento</h4>
+                                        <p>Base sólida para implementar melhorias e expandir funcionalidades</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="future-outlook">
+                            <h3>🔮 Perspectivas Futuras</h3>
+                            <div class="future-actions">
+                                <div class="action-priority high">
+                                    <h4>🔥 Prioridade Alta</h4>
+                                    <p>Implementar melhorias em feedback e processos de autenticação</p>
+                                </div>
+                                <div class="action-priority medium">
+                                    <h4>⚡ Prioridade Média</h4>
+                                    <p>Expandir funcionalidades e melhorar navegação</p>
+                                </div>
+                                <div class="action-priority low">
+                                    <h4>📈 Prioridade Baixa</h4>
+                                    <p>Refinamentos de interface e otimizações de performance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Navegação por teclado -->
+        <div class="keyboard-hint">
+            <p>Use as setas ← → ou os botões para navegar</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
